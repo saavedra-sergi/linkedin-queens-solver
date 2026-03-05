@@ -11,7 +11,7 @@ def main():
     if board.is_safe(2, 2):
         board.place_queen(2, 2)
     else:
-        board.place_X(2,2)
+        board.place_x(2,2)
 
     board.print_board()
 

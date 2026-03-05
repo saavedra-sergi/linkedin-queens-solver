@@ -1,7 +1,7 @@
 class Board:
     #empty -> 0
     #queens ->1
-    #cross -> 2
+    #cross -> -1
 
 
 
@@ -15,7 +15,7 @@ class Board:
             for cell in row:
                 if cell == 1:
                     line += "Q "
-                if cell == 2:
+                if cell == -1:
                     line += "X "
                 if cell == 0:
                     line += ". "
@@ -24,8 +24,9 @@ class Board:
     def place_queen(self, row, col):
         self.grid[row][col] = 1
     
-    def place_X(self, row, col):
-        self.grid[row][col] = 2
+    def place_x(self, row, col):
+        if self.grid[row][col] == 0:
+          self.grid[row][col] = -1
 
     def remove_queen(self, row, col):
         self.grid[row][col] = 0
