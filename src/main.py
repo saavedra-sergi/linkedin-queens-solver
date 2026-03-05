@@ -1,19 +1,19 @@
 from board import Board
+from solver import solve
 
 
 def main():
 
-    board = Board(5)
+    size = 7
+    board = Board(size)
 
-    if board.is_safe(0, 2):
-        board.place_queen(0, 2)
+    solved = solve(board, 0)
 
-    if board.is_safe(2, 2):
-        board.place_queen(2, 2)
+    if solved:
+        print("Solution found:\n")
+        board.print_board()
     else:
-        board.place_x(2,2)
-
-    board.print_board()
+        print("No solution found")
 
 
 if __name__ == "__main__":
