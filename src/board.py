@@ -10,8 +10,6 @@ class Board:
             for cell in row:
                 if cell == 1:
                     line += "Q "
-                elif cell == -1:
-                    line += "X "
                 else:
                     line += ". "
             print(line)

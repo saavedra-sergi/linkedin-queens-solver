@@ -1,4 +1,4 @@
-
+from board import Board
 
 def solve(board, row=0):
 
@@ -19,6 +19,9 @@ def solve(board, row=0):
 
             # backtrack: quitar reina
             board.remove_queen(row, col)
+        #quiero ver cada fase del backtracking
+
+        
 
     # ninguna posición válida encontrada en esta fila
     return False
