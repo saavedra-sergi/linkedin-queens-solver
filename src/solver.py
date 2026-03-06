@@ -17,8 +17,10 @@ def solve(board, row=0):
 
             # backtrack: quitar reina
             board.remove_queen(row, col)
-        #quiero ver cada fase del backtracking
+        
 
+        #para enseñar las regiones, una vez lo haya resuelto, 
+        # volvemos a copiar los numeros de las regiones en el tablero
         
 
     # ninguna posición válida encontrada en esta fila

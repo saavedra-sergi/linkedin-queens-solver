@@ -17,9 +17,14 @@ def main():
     regions = data["regions"]
 
     board = Board(size, regions)
+    auxiliarBoard = Board(size, regions)
 
     if solve(board):
         print("Solution found:\n")
+        for row in range(board.size):
+            for col in range(board.size):       #I'm pretty sure I can do this in a better way
+                if board.grid[row][col] != -1:
+                    board.grid[row][col] = auxiliarBoard.regions[row][col]
         board.print_board()
     else:
         print("No solution")
