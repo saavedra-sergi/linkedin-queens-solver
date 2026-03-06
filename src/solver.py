@@ -1,5 +1,3 @@
-from board import Board
-
 def solve(board, row=0):
 
     # Caso base: todas las filas completadas
