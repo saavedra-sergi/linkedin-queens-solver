@@ -17,13 +17,14 @@ def main():
     regions = data["regions"]
 
     board = Board(size, regions)
-    auxiliarBoard = Board(size, regions)
+    
 
     if solve_backtracking(board):
         print("Solution found:\n")
         board.print_board()
     else:
         print("No solution")
+        board.print_board()
 
 if __name__ == "__main__":
     main()
